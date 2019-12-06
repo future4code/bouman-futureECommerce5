@@ -6,24 +6,22 @@ import ContainerProdutos from '../ContainerProdutos/index'
 
 
 const MainContainer = Styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr ;
+display: flex;
 `
 
 class ContainerPrincipal extends React.Component{
    
     render(){
-        // const listaDeProdutos = this.props.produtos.map((produto) => {
-        //     return <ContainerProdutos/>
-        // })
+        const listaDeProdutos = this.props.produtos.map((produto) => {
+            return  <ContainerProdutos dadosProdutos={produto} />
+        })
         return(
+
             <MainContainer>
                 <ContainerFiltros></ContainerFiltros>
-                <ContainerProdutos listaProdutos={this.props.produtos}></ContainerProdutos>
-                <ContainerCarrinho></ContainerCarrinho>
-                
-               
+                    {listaDeProdutos}
+                <ContainerCarrinho adcProduto={this.adcProduto} ></ContainerCarrinho>
+
             </MainContainer>
             
         )

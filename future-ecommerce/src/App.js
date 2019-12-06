@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
-import ContainerPrincipal from './components/MainContainer/index';
+import MainContainer from './components/MainContainer/index';
 
 const listaProdutos = [
   {
@@ -61,11 +61,38 @@ const listaProdutos = [
 
 
 class App extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            produtos: listaProdutos,
+            arrayProdutos: [],
+
+        }
+    }
+
+
+    adcProduto = (produtos) => {
+        const novoArrayCarrinho = [...this.state.arrayProdutos]
+        const indexCarrinho = this.state.arrayProdutos.findIndex((item) => item.produtos.id === produtos.id)
+    
+        if (indexCarrinho > -1) {
+            novoArrayCarrinho[indexCarrinho].quantity += 1
+        } else {
+            novoArrayCarrinho.push({ produto: produtos, quantity: 1 })
+        }
+    
+        this.setState({
+          arrayProdutos: novoArrayCarrinho,
+        })
+        console.log("dasda")
+      }
+
+
   render(){
     
   return (
       <div className="App">
-          <ContainerPrincipal produtos={listaProdutos}></ContainerPrincipal>
+          <MainContainer produtos={listaProdutos}></MainContainer>
            
       </div>
     );
