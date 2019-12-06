@@ -22,8 +22,8 @@ class Produtos extends React.Component{
             <Produto>
                 <ImgProduto src={this.props.imagemProduto}></ImgProduto>
                 <p>{this.props.nomeProduto}</p>
-                <p>{this.props.precoProduto}</p>
-                <button>Adicionar ao carrinho</button>
+                <p>R${this.props.precoProduto},00</p>
+                <button onClick={this.props.adcCarrinho}>Adicionar ao carrinho</button>
             </Produto>            
         )
     }

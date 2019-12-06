@@ -4,15 +4,14 @@ import styled from "styled-components";
 const EstiloHeader = styled.div`
    display: grid;
    grid-column-start: 3;
-   padding-top: 10px;
+   padding-top: 15px;
    padding-right: 10px;
 `
 
-class Header extends React.Component {
+class FiltroHeader extends React.Component {
    constructor(props){
       super(props)
    }
-
    render(){
       return (
          <EstiloHeader>            
@@ -26,4 +25,4 @@ class Header extends React.Component {
 }
 
 
-export default Header;
+export default FiltroHeader;

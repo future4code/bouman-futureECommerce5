@@ -9,13 +9,21 @@ width: 200px;
 margin-top:10px;
 `
 
+
 class ContainerCarrinho extends React.Component{
     render(){
+
         return(
-            <Carrinho>
+            <Carrinho >
+               
                 <h3>Carrinho:</h3>
+                <div> 
+                    
+                </div>
                 <p>Total: R$ 0.00</p>
+               
             </Carrinho>
+
         )
     }
 }
