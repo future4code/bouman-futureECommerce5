@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+=======
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+ 
+  
+}
+>>>>>>> fefc07d5ce4642f43f5a25ddeba610a753d3a0d5
