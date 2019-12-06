@@ -3,11 +3,7 @@ import Styled from "styled-components";
 
 
 const Produto = Styled.div`
-width: 200px;
-border: solid 1px orange;
-margin-right:10px;
-margin-top:10px;
-padding:10px;
+
 `
 
 const ImgProduto = Styled.img`

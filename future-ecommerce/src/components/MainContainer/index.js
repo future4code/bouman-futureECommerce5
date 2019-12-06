@@ -6,8 +6,15 @@ import ContainerProdutos from '../ContainerProdutos/index'
 
 
 const MainContainer = Styled.div`
-display: flex;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-template-rows: 1fr 1fr;
 `
+const SectionContainer = Styled.section`
+display: flex;
+width: 100%;
+`
+
 
 class ContainerPrincipal extends React.Component{
    
@@ -17,13 +24,15 @@ class ContainerPrincipal extends React.Component{
         })
         return(
 
+        <SectionContainer>
+        <ContainerFiltros></ContainerFiltros>
+        
             <MainContainer>
-                <ContainerFiltros></ContainerFiltros>
-                    {listaDeProdutos}
-                <ContainerCarrinho adcProduto={this.adcProduto} ></ContainerCarrinho>
-
+            {listaDeProdutos}
             </MainContainer>
-            
+
+        <ContainerCarrinho adcProduto={this.adcProduto} ></ContainerCarrinho>
+            </SectionContainer>   
         )
     }
 }

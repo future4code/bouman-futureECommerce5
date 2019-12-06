@@ -4,8 +4,7 @@ import Styled from "styled-components";
 const Filtros = Styled.div`
 border: solid 1px black;
 padding:10px;
-height: auto;
-width: 200px;
+width: 15%;
 margin-top:10px;
 margin-left:10px;
 `

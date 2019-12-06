@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+const ProdutoContador = styled.div`
+display:flex;
+`
 
 class ProdutosContador extends React.Component {
    constructor(props){
@@ -9,9 +12,9 @@ class ProdutosContador extends React.Component {
 
    render(){
       return (
-         <div>            
+         <ProdutoContador>            
             <p>Quantidade de Produtos: 0</p>
-         </div>
+         </ProdutoContador>
       )
    }
 }
