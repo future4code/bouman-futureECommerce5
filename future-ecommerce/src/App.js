@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import styled from 'styled-components';
 import MainContainer from './components/MainContainer/index';
+import Header from './components/FiltroHeader/index';
+import ProdutosContador from './components/ProdutosContador/index'
 
 const listaProdutos = [
   {
@@ -50,13 +52,6 @@ const listaProdutos = [
       imgProduto: "https://cdn.colab55.com/images/1483562573/studio/14974/art/67412/tees/standard/preta/1.png",
   },
 
-  {
-      id: 7,
-      nome: "Camiseta 5",
-      valor: 30,
-      imgProduto: "https://cdn.colab55.com/images/1483562573/studio/14974/art/67412/tees/standard/preta/1.png",
-  },
-
 ]
 
 
@@ -84,7 +79,6 @@ class App extends React.Component {
         this.setState({
           arrayProdutos: novoArrayCarrinho,
         })
-        console.log("dasda")
       }
 
 
@@ -92,8 +86,13 @@ class App extends React.Component {
     
   return (
       <div className="App">
+      <div>  
+     
           <MainContainer produtos={listaProdutos}></MainContainer>
-           
+
+          <ProdutosContador/>
+      <Header/> 
+          </div>
       </div>
     );
   }

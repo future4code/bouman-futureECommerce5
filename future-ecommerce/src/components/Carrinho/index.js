@@ -4,9 +4,9 @@ import Styled from "styled-components";
 const Carrinho = Styled.div`
 border: solid 1px black;
 padding:10px;
-height: auto;
-width: 200px;
+width: 15%;
 margin-top:10px;
+margin-left: 40px;
 `
 
 
@@ -17,9 +17,6 @@ class ContainerCarrinho extends React.Component{
             <Carrinho >
                
                 <h3>Carrinho:</h3>
-                <div> 
-                    
-                </div>
                 <p>Total: R$ 0.00</p>
                
             </Carrinho>

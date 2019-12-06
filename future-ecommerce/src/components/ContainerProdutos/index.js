@@ -1,16 +1,18 @@
 import React from "react";
 import Styled from "styled-components";
 import Produtos from "../Produto/index";
-import Header from '../FiltroHeader/index';
-import ProdutosContador from '../ProdutosContador/index'
+
 
 
 const ContainerProduto = Styled.div`
 display:grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr;
-grid-row-gap: 10px;
-
+padding: 10px;
+gap: 10px;
+width: 80%;
+align-items: center;
+margin: 10px;
+margin-left: 30px;
+border: 1px solid orange;
 `
 
 class ContainerProdutos extends React.Component{
@@ -23,8 +25,6 @@ class ContainerProdutos extends React.Component{
         
         return(
             <ContainerProduto>
-                {/* <ProdutosContador/>
-                <Header/>    */}
             <Produtos 
             imagemProduto={this.props.dadosProdutos.imgProduto}
             nomeProduto={this.props.dadosProdutos.nome}
